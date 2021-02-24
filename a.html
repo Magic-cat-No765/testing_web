@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="a.css">
+		<script language = "javascript" type = "text/javascript" src="a.js"></script>
+	</head>
+	<body>
+		<div class="background" id="main_bg">
+			<div class="headermenu">
+				<button class="home_button" id="home_button" onmouseover="FG_logo_foward()">
+					<div style="background-position: 0% 0%;"></div>
+					<div class="scroll_menu">
+						<a href="#">Menu 1</a>
+						<a href="#">Menu 2</a>
+						<a href="#">Menu 3</a>
+						<a href="#">Menu 4</a>
+						<a href="#">Menu 5</a>
+					</div>
+				</button>
+			</div>
+		</div>
+		<script language = "javascript" type = "text/javascript">
+			var parent = document.getElementById("home_button");
+			parent.addEventListener('mousein',makeMouseInFn(parent),true);
+			parent.addEventListener('mouseout',makeMouseOutFn(parent),true);
+
+			document.getElementById("main_bg").style.backgroundImage = "url('./resource/bg-bw.jpg')"
+			setTimeout(function(){
+				document.getElementById("main_bg").style.backgroundImage = "url('./resource/bg.jpg')"
+				document.getElementsByClassName("headermenu")[0].style.top = "0px"
+			}, 1000)
+		</script>
+	</body>
+</html>
