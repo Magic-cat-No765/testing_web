@@ -7,7 +7,7 @@
     top: 0px;
     position: absolute;
     background-image: url("./resource/bg.jpg");
-    transition-property: background;
+    transition-property: all;
     transition-duration: 2500ms;
     opacity: 100%;
     z-index: 0;
