@@ -2,12 +2,10 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="a.css">
 		<script language = "javascript" type = "text/javascript" src="a.js"></script>
-		<link rel="preload" href="./resource/bg-bw.jpg" as="image">
-		<link rel="preload" href="./resource/bg.jpg" as="image">
-		
 	</head>
 	<body>
-		<div class="background" id="main_bg">
+		<div class="background-before" id="main_bg_before"></div>
+		<div class="background-after" id="main_bg_after">
 			<div class="headermenu">
 				<button class="home_button" id="home_button" onmouseover="FG_logo_foward()">
 					<div style="background-position: 0% 0%;"></div>
@@ -25,10 +23,16 @@
 			var parent = document.getElementById("home_button");
 			parent.addEventListener('mousein',makeMouseInFn(parent),true);
 			parent.addEventListener('mouseout',makeMouseOutFn(parent),true);
+			
 
 			window.onload = function() {
+				
 				setTimeout(function(){
-					document.getElementById("main_bg").style.backgroundImage = "url('./resource/bg.jpg')"
+					document.getElementById("main_bg_before").style.opacity = "0%";
+					document.getElementById("main_bg_after").style.opacity = "100%";
+
+					document.getElementById("main_bg_before").style.zIndex = "0";
+					document.getElementById("main_bg_after").style.zIndex  = "100";
 					document.getElementsByClassName("headermenu")[0].style.top = "0px"
 				}, 1000)
 			}
