@@ -6,7 +6,7 @@
     left: 0px;
     top: 0px;
     position: absolute;
-    background-image: url("./resource/bg.jpg");
+    background-image: url("./resource/bg-bw.jpg");
     transition-property: background-image;
     transition-duration: 2500ms;
     opacity: 100%;
