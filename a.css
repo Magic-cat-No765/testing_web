@@ -8,7 +8,7 @@
     position: absolute;
     background-image: url("./resource/bg-bw.jpg");
     transition-property: background-image;
-    transition-duration: 2500ms;
+    transition-duration: 5s;
     opacity: 100%;
     z-index: 0;
     background-size: cover;
