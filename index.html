@@ -2,15 +2,9 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="a.css">
 		<script language = "javascript" type = "text/javascript" src="a.js"></script>
-		<script>
-			function preloadImage(url)
-			{
-			    var img=new Image();
-			    img.src=url;
-			}
-			preloadImage('./resource/bg-bw.jpg');
-			preloadImage('./resource/bg.jpg');
-		</script>
+		<link rel="preload" href="./resource/bg-bw.jpg" as="image">
+		<link rel="preload" href="./resource/bg.jpg" as="image">
+		
 	</head>
 	<body>
 		<div class="background" id="main_bg" style="background-image: url(./resource/bg-bw.jpg);">
