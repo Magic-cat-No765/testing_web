@@ -13,7 +13,7 @@
 		</script>
 	</head>
 	<body>
-		<div class="background" id="main_bg">
+		<div class="background" id="main_bg" style="background-image: url(./resource/bg-bw.jpg);">
 			<div class="headermenu">
 				<button class="home_button" id="home_button" onmouseover="FG_logo_foward()">
 					<div style="background-position: 0% 0%;"></div>
@@ -32,11 +32,12 @@
 			parent.addEventListener('mousein',makeMouseInFn(parent),true);
 			parent.addEventListener('mouseout',makeMouseOutFn(parent),true);
 
-			document.getElementById("main_bg").style.backgroundImage = "url('./resource/bg-bw.jpg')"
-			setTimeout(function(){
-				document.getElementById("main_bg").style.backgroundImage = "url('./resource/bg.jpg')"
-				document.getElementsByClassName("headermenu")[0].style.top = "0px"
-			}, 1000)
+			window.onload = function() {
+				setTimeout(function(){
+					document.getElementById("main_bg").style.backgroundImage = "url('./resource/bg.jpg')"
+					document.getElementsByClassName("headermenu")[0].style.top = "0px"
+				}, 1000)
+			}
 		</script>
 	</body>
 </html>
